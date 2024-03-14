@@ -1,12 +1,13 @@
 from markupsafe import escape
 #from werkzeug.utils import secure_filenam
-from flask import Flask#, url_for, request, render_template
+from flask import Flask, render_template#, url_for, request
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return '<h1>Hello from Flask!</h1>'
+def index():
+    return render_template('index.html')
+
 
 @app.route('/user/<username>')
 def show_user_profile(username):
@@ -160,4 +161,3 @@ def logout():
 #        with app.open_resource('schema.sql', mode='r') as f:
 #            db.cursor().executescript(f.read())
 #        db.commit()
-

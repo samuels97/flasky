@@ -12,14 +12,14 @@
     <title>Mexant - Financial HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/templatemo-574-mexant.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-574-mexant.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
   </head>
 
@@ -34,7 +34,7 @@
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.html" class="logo">
-                          <img src="{% static 'assets/images/logo.png' %}" alt="">
+                          <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
@@ -51,8 +51,8 @@
                               </ul>
                           </li>
                           <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
-                          <li><a href="contact-us.html">Contact Support</a></li> 
-                      </ul>        
+                          <li><a href="contact-us.html">Contact Support</a></li>
+                      </ul>
                       <a class='menu-trigger'>
                           <span>Menu</span>
                       </a>
@@ -68,7 +68,7 @@
   <div class="swiper-container" id="top">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
+        <div class="slide-inner" style='background-image:url({{ url_for("static", filename="assets/images/slide-01.jpg") }})'>
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url({% static 'assets/images/slide-02.jpg' %})">
+        <div class="slide-inner" style="background-image:url({{ url_for('static', filename='assets/images/slide-02.jpg') }})">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url({% static '1assets/images/slide-03.jpg' %})">
+        <div class="slide-inner" style="background-image:url({{ url_for('static', filename='assets/images/slide-03.jpg') }})">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
@@ -359,7 +359,7 @@
       <div class="row">
         <div class="col-lg-7">
           <div class="left-image">
-            <img src="{% static 'assets/images/calculator-image.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/calculator-image.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-5">
@@ -428,7 +428,7 @@
               <h4>David Eigenberg</h4>
               <span>CEO of Mexant</span>
               <div class="right-image">
-                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
+                <img src="{{ url_for('static', filename='assets/images/testimonials-01.jpg') }}" alt="">
               </div>
             </div>
             <div class="item">
@@ -437,7 +437,7 @@
               <h4>Andrew Garfield</h4>
               <span>CTO of Mexant</span>
               <div class="right-image">
-                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
+                <img src="{{ url_for('static', filename='assets/images/testimonials-01.jpg') }}" alt="">
               </div>
             </div>
             <div class="item">
@@ -446,7 +446,7 @@
               <h4>George Lopez</h4>
               <span>Crypto Manager</span>
               <div class="right-image">
-                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
+                <img src="{{ url_for('static', filename='assets/images/testimonials-01.jpg') }}" alt="">
               </div>
             </div>
           </div>
@@ -460,32 +460,32 @@
       <div class="row">
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="{% static 'assets/images/client-01.png' %}" alt="">
+            <img src="{{ url_for('static', filename='assets/images/client-01.png') }}" alt="">
           </div>
         </div>
       </div>
@@ -496,8 +496,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 Mexant Co., Ltd. All Rights Reserved. 
-          
+          <p>Copyright © 2022 Mexant Co., Ltd. All Rights Reserved.
+
           <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
         </div>
       </div>
@@ -506,15 +506,15 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
-    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{{ url_for('static', filename='assets/js/isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
 
-    <script src="{% static 'assets/js/tabs.js' %}"></script>
-    <script src="{% static 'assets/js/swiper.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{{ url_for('static', filename='assets/js/tabs.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/swiper.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
     <script>
         var interleaveOffset = 0.5;
 
@@ -538,7 +538,7 @@
               var innerTranslate = slideProgress * innerOffset;
               swiper.slides[i].querySelector(".slide-inner").style.transform =
                 "translate3d(" + innerTranslate + "px, 0, 0)";
-            }      
+            }
           },
           touchStart: function() {
             var swiper = this;
