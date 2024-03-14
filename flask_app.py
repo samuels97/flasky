@@ -1,6 +1,6 @@
 from markupsafe import escape
-from werkzeug.utils import secure_filenam
-from flask import Flask, url_for, request, render_template
+#from werkzeug.utils import secure_filenam
+from flask import Flask#, url_for, request, render_template
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def show_subpath(subpath):
 
 #print(url_for('show_user_profile', username='Sam'))
 #url_for('static', filename='style.css')
-
+'''
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -42,7 +42,7 @@ def login():
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
-    return render_template('hello.html, name=name)
+    return render_template('hello.html', name=name)
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -90,71 +90,74 @@ def index():
     if 'username' in session:
         return f'Logged in as {session["username"]}'
     return 'You are not logged in'
+'''
+#@app.route('/login', methods=['GET', 'POST'])
+#def login():
+#    if request.method == 'POST':
+#        session['username'] = request.form['username']
+#        return redirect(url_for('index'))
+#    return '''
+#        <form method="post">
+#            <p><input type=text name=username>
+ #           <p><input type=submit value=Login>
+#        </form>
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        session['username'] = request.form['username']
-        return redirect(url_for('index'))
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
-
+'''
 @app.route('/logout')
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('index'))
+    '''
 
-'''python -c 'import secrets; print(secrets.token_hex())'
-'192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
-'''
+#python -c 'import secrets; print(secrets.token_hex())'
+#'192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
+
 
 #DB
-import sqlite3
-from flask import g
 
-DATABASE = '/path/to/database.db'
+#import sqlite3
+#from flask import g
 
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
+#DATABASE = '/path/to/database.db'
 
-@app.teardown_appcontext
-def close_connection(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
+#def get_db():
+#    db = getattr(g, '_database', None)
+#    if db is None:
+#        db = g._database = sqlite3.connect(DATABASE)
+#    return db
 
-@app.route('/')
-def index():
-    cur = get_db().cursor()
-def query_db(query, args=(), one=False):
-    cur = get_db().execute(query, args)
-    rv = cur.fetchall()
-    cur.close()
-    return (rv[0] if rv else None) if one else rv
+#@app.teardown_appcontext
+#def close_connection(exception):
+#    db = getattr(g, '_database', None)
+#    if db is not None:
+#        db.close()
 
-'''
-for user in query_db('select * from users'):
-    print(user['username'], 'has the id', user['user_id'])
+#@app.route('/')
+#def index():
+#    cur = get_db().cursor()
+#def query_db(query, args=(), one=False):
+#    cur = get_db().execute(query, args)
+#    rv = cur.fetchall()
+#    cur.close()
+#    return (rv[0] if rv else None) if one else rv
 
-user = query_db('select * from users where username = ?',
-                [the_username], one=True)
-if user is None:
-    print('No such user')
-else:
-    print(the_username, 'has the id', user['user_id'])
 
-def init_db():
-    with app.app_context():
-        db = get_db()
-        with app.open_resource('schema.sql', mode='r') as f:
-            db.cursor().executescript(f.read())
-        db.commit()
-¹'''
+
+#for user in query_db('select * from users'):
+#    print(user['username'], 'has the id', user['user_id'])
+
+#user = query_db('select * from users where username = ?',
+#                [the_username], one=True)
+#if user is None:
+#    print('No such user')
+#else:
+#    print(the_username, 'has the id', user['user_id'])
+
+#def init_db():
+#    with app.app_context():
+#        db = get_db()
+#        with app.open_resource('schema.sql', mode='r') as f:
+#            db.cursor().executescript(f.read())
+#        db.commit()
+
