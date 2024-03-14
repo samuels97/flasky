@@ -12,22 +12,15 @@
     <title>Mexant - Financial HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-574-mexant.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!--
-
-TemplateMo 574 Mexant
-
-https://templatemo.com/tm-574-mexant
-
--->
   </head>
 
 <body>
@@ -41,7 +34,7 @@ https://templatemo.com/tm-574-mexant
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.html" class="logo">
-                          <img src="assets/images/logo.png" alt="">
+                          <img src="{% static 'assets/images/logo.png' %}" alt="">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
@@ -98,7 +91,7 @@ https://templatemo.com/tm-574-mexant
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-02.jpg)">
+        <div class="slide-inner" style="background-image:url({% static 'assets/images/slide-02.jpg' %})">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
@@ -121,7 +114,7 @@ https://templatemo.com/tm-574-mexant
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-03.jpg)">
+        <div class="slide-inner" style="background-image:url({% static '1assets/images/slide-03.jpg' %})">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
@@ -366,7 +359,7 @@ https://templatemo.com/tm-574-mexant
       <div class="row">
         <div class="col-lg-7">
           <div class="left-image">
-            <img src="assets/images/calculator-image.png" alt="">
+            <img src="{% static 'assets/images/calculator-image.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-5">
@@ -435,7 +428,7 @@ https://templatemo.com/tm-574-mexant
               <h4>David Eigenberg</h4>
               <span>CEO of Mexant</span>
               <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
+                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
               </div>
             </div>
             <div class="item">
@@ -444,7 +437,7 @@ https://templatemo.com/tm-574-mexant
               <h4>Andrew Garfield</h4>
               <span>CTO of Mexant</span>
               <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
+                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
               </div>
             </div>
             <div class="item">
@@ -453,7 +446,7 @@ https://templatemo.com/tm-574-mexant
               <h4>George Lopez</h4>
               <span>Crypto Manager</span>
               <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
+                <img src="{% static 'assets/images/testimonials-01.jpg' %}" alt="">
               </div>
             </div>
           </div>
@@ -467,32 +460,32 @@ https://templatemo.com/tm-574-mexant
       <div class="row">
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-2 col-sm-4 col-6">
           <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+            <img src="{% static 'assets/images/client-01.png' %}" alt="">
           </div>
         </div>
       </div>
@@ -513,15 +506,15 @@ https://templatemo.com/tm-574-mexant
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
+    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
 
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{% static 'assets/js/tabs.js' %}"></script>
+    <script src="{% static 'assets/js/swiper.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
     <script>
         var interleaveOffset = 0.5;
 
